@@ -2,42 +2,35 @@
 // @vendors
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 
 // @material-ui
 import TextField from '@material-ui/core/TextField';
 
-// @actions
-import { validateAddress } from '../../actions';
-
 const AddressInput = (props) => {
-    const { geocoded_address_formatted_address, isToAddressValid, validateAddress } = props;
+    const {
+        geocoded_address_formatted_address,
+        isAddressValid,
+        label,
+        onBlur
+    } = props;
     return (
         <TextField
-            id="To-address"
+            id={`${label} Address`}
             fullWidth
-            error={!isToAddressValid}
-            helperText={(!isToAddressValid) ? `Did you mean: ${geocoded_address_formatted_address}` : ''}
-            label="To"
+            error={!isAddressValid}
+            helperText={(!isAddressValid) ? `Did you mean: ${geocoded_address_formatted_address}` : ''}
+            label={label}
             margin="normal"
-            onBlur={e => validateAddress(e.target.value)}
+            onBlur={e => onBlur(e.target.value)}
         />
     );
 };
 
-const mapDispatchToProps = dispatch => ({
-    validateAddress: address => dispatch(validateAddress(address))
-});
-
-const mapStateToProps = state => ({
-    geocoded_address_formatted_address: state.geocoded_address_formatted_address,
-    isToAddressValid: state.isToAddressValid
-});
-
 AddressInput.propTypes = {
     geocoded_address_formatted_address: PropTypes.string.isRequired,
-    isToAddressValid: PropTypes.bool.isRequired,
-    validateAddress: PropTypes.func.isRequired
+    isAddressValid: PropTypes.bool.isRequired,
+    label: PropTypes.string.isRequired,
+    onBlur: PropTypes.func.isRequired
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddressInput);
+export default AddressInput;

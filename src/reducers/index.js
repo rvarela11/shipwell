@@ -1,7 +1,7 @@
 const initialState = {
     companyData: [],
     geocoded_address_formatted_address: '',
-    isToAddressValid: true,
+    isAddressValid: true,
     userData: []
 };
 
@@ -25,7 +25,7 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 geocoded_address_formatted_address: geocoded_address.formatted_address,
-                isToAddressValid: (!Array.isArray(warnings) || !warnings.length)
+                isAddressValid: (!Array.isArray(warnings) || !warnings.length)
             };
         default:
             return state;
