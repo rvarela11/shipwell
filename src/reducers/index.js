@@ -1,7 +1,9 @@
 const initialState = {
     companyData: [],
-    geocoded_address_formatted_address: '',
-    isAddressValid: true,
+    geocoded_address_From: '',
+    geocoded_address_To: '',
+    isAddressValid_From: true,
+    isAddressValid_To: true,
     userData: []
 };
 
@@ -15,17 +17,15 @@ export const reducer = (state = initialState, action) => {
                 userData: state.userData.concat(user)
             };
         case 'RES_VALIDATE_ADDRESS':
-            // geocoded_address
-            // provided_formatted_address
-            // warnings
+            // Setting 2 (From & To) geocoded_address and isAddressValid
+            // This will show specific error message if both inputs are being used
             // eslint-disable-next-line camelcase
             const { geocoded_address, warnings } = action.payload;
-            console.log(action.payload);
-            console.log(geocoded_address.formatted_address);
+            const { label } = action;
             return {
                 ...state,
-                geocoded_address_formatted_address: geocoded_address.formatted_address,
-                isAddressValid: (!Array.isArray(warnings) || !warnings.length)
+                [`geocoded_address_${label}`]: geocoded_address.formatted_address,
+                [`isAddressValid_${label}`]: (!Array.isArray(warnings) || !warnings.length)
             };
         default:
             return state;

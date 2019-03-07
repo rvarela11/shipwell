@@ -11,6 +11,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 // @components
+import FromAddressInput from '../../containers/FromAddressInput';
 import ToAddressInput from '../../containers/ToAddressInput';
 
 // Setting material-ui classes
@@ -46,6 +47,7 @@ const AddressCard = (props) => {
                 <Typography className={`${classes.typography_media_query} ${classes.address_title}`} variant="h5">
                     Address
                 </Typography>
+                <FromAddressInput />
                 <ToAddressInput />
                 <CardActions>
                     <Button
