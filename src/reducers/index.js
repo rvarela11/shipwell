@@ -1,7 +1,10 @@
 const initialState = {
     companyData: [],
+    formatted_address_From: '',
+    formatted_address_To: '',
     geocoded_address_From: '',
     geocoded_address_To: '',
+    isAddressCardButtonDisabled: true,
     isAddressValid_From: true,
     isAddressValid_To: true,
     userData: []
@@ -20,12 +23,19 @@ export const reducer = (state = initialState, action) => {
             // Setting 2 (From & To) geocoded_address and isAddressValid
             // This will show specific error message if both inputs are being used
             // eslint-disable-next-line camelcase
-            const { geocoded_address, warnings } = action.payload;
+            const { geocoded_address, provided_formatted_address, warnings } = action.payload;
             const { label } = action;
             return {
                 ...state,
+                [`formatted_address_${label}`]: provided_formatted_address,
                 [`geocoded_address_${label}`]: geocoded_address.formatted_address,
-                [`isAddressValid_${label}`]: (!Array.isArray(warnings) || !warnings.length)
+                [`isAddressValid_${label}`]: (!Array.isArray(warnings) || !warnings.length),
+                isAddressCardButtonDisabled: false
+            };
+        case 'DISABLE_ADDRESS_CARD_BUTTON':
+            return {
+                ...state,
+                isAddressCardButtonDisabled: true
             };
         default:
             return state;

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import AddressInput from '../components/AddressInput/AddressInput';
 
 // @actions
-import { validateAddress } from '../actions';
+import { validateAddress, disableAddressCardButton } from '../actions';
 
 const mapStateToProps = state => ({
     label: 'From',
@@ -16,6 +16,9 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     onBlur: (formattedAddress) => {
         dispatch(validateAddress(formattedAddress, 'From'));
+    },
+    onFocus: () => {
+        dispatch(disableAddressCardButton());
     }
 });
 

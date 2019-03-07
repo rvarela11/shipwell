@@ -37,3 +37,8 @@ export const validateAddress = (address, label) => (dispatch) => {
         .then(response => dispatch(resValidateAddress(response.data, label)))
         .catch(error => console.log('Error', error));
 };
+
+export const DISABLE_ADDRESS_CARD_BUTTON = 'DISABLE_ADDRESS_CARD_BUTTON';
+export const disableAddressCardButton = () => ({
+    type: DISABLE_ADDRESS_CARD_BUTTON
+});
