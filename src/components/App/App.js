@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 // @components
+import AddressInput from '../AddressInput/AddressInput';
 import Header from '../Header/Header';
 
 // @actions
@@ -23,8 +24,7 @@ class App extends Component {
     }
 
     render() {
-        const { companyData, userData } = this.props;
-        console.log({ companyData, userData });
+        const { userData } = this.props;
         if (!Array.isArray(userData) || !userData.length) {
             return (
                 <div className="circular-progress">
@@ -35,6 +35,7 @@ class App extends Component {
         return (
             <div className="App">
                 <Header />
+                <AddressInput />
             </div>
         );
     }
@@ -50,7 +51,6 @@ const mapStateToProps = state => ({
 });
 
 App.propTypes = {
-    companyData: PropTypes.array.isRequired,
     getUserData: PropTypes.func.isRequired,
     userData: PropTypes.array.isRequired
 };

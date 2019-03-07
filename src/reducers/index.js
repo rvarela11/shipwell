@@ -1,11 +1,13 @@
 const initialState = {
     companyData: [],
+    isToDestinationValid: false,
+    isFromDestinationValid: false,
     userData: []
 };
 
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'GET_USER_DATA':
+        case 'RES_USER_DATA':
             const { company, user } = action.payload;
             return {
                 ...state,
