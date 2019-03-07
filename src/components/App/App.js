@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 // @components
-import AddressInput from '../AddressInput/AddressInput';
+import AddressCard from '../AddressCard/AddressCard';
 import Header from '../Header/Header';
 
 // @actions
@@ -35,7 +35,9 @@ class App extends Component {
         return (
             <div className="App">
                 <Header />
-                <AddressInput />
+                <div className="address">
+                    <AddressCard />
+                </div>
             </div>
         );
     }
