@@ -3,6 +3,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+// @material-ui
+import CircularProgress from '@material-ui/core/CircularProgress';
+
+// @components
+import Header from '../Header/Header';
+
 // @actions
 import { getUserData } from '../../actions';
 
@@ -19,9 +25,14 @@ class App extends Component {
     render() {
         const { companyData, userData } = this.props;
         console.log({ companyData, userData });
+        if (!Array.isArray(userData) || !userData.length) {
+            return (
+                <CircularProgress />
+            );
+        }
         return (
             <div className="App">
-                Howdy
+                <Header />
             </div>
         );
     }
