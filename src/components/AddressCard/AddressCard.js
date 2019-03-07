@@ -25,6 +25,9 @@ const styles = theme => ({
             width: '75%'
         }
     },
+    address_card_content: {
+        width: '75%'
+    },
     address_title: {
         textAlign: 'center'
     },
@@ -39,7 +42,7 @@ const AddressCard = (props) => {
     const { classes } = props;
     return (
         <Card className={classes.address_card}>
-            <CardContent>
+            <CardContent className={classes.address_card_content}>
                 <Typography className={`${classes.typography_media_query} ${classes.address_title}`} variant="h5">
                     Address
                 </Typography>

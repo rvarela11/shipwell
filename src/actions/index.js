@@ -18,9 +18,14 @@ export const getUserData = () => (dispatch) => {
         .catch(error => console.log('Error', error));
 };
 
-export const validateDestination = address => (dispatch) => {
+export const RES_VALIDATE_ADDRESS = 'RES_VALIDATE_ADDRESS';
+export const resValidateAddress = data => ({
+    type: RES_VALIDATE_ADDRESS,
+    payload: data
+});
+
+export const validateAddress = address => (dispatch) => {
     const URL = 'https://dev-api.shipwell.com/v2/locations/addresses/validate/ ';
-    console.log(dispatch);
     axios({
         method: 'post',
         url: URL,
@@ -28,6 +33,6 @@ export const validateDestination = address => (dispatch) => {
             formatted_address: address
         }
     })
-        .then(response => console.log(response.data))
+        .then(response => dispatch(resValidateAddress(response.data)))
         .catch(error => console.log('Error', error));
 };
