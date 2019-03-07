@@ -27,7 +27,9 @@ class App extends Component {
         console.log({ companyData, userData });
         if (!Array.isArray(userData) || !userData.length) {
             return (
-                <CircularProgress />
+                <div className="circular-progress">
+                    <CircularProgress />
+                </div>
             );
         }
         return (
