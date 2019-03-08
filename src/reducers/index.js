@@ -1,12 +1,17 @@
+/* eslint-disable camelcase */
 const initialState = {
     companyData: [],
-    geocoded_address_From: '',
-    geocoded_address_To: '',
-    input_address_From: '',
-    input_address_To: '',
+    geocoded_address_Origin: '',
+    geocoded_address_Destination: '',
+    input_address_Origin: '',
+    input_address_Destination: '',
     isAddressCardButtonDisabled: true,
-    isAddressValid_From: true,
-    isAddressValid_To: true,
+    isAddressValid_Origin: true,
+    isAddressValid_Destination: true,
+    latitude_address_Origin: null,
+    longitude_address_Origin: null,
+    latitude_address_Destination: null,
+    longitude_address_Destination: null,
     userData: []
 };
 
@@ -20,17 +25,19 @@ export const reducer = (state = initialState, action) => {
                 userData: state.userData.concat(user)
             };
         case 'RES_VALIDATE_ADDRESS':
-            // Setting 2 (From & To) geocoded_address and isAddressValid
+            // Setting 2 (Origin & Destination) geocoded_address and isAddressValid
             // This will show specific error message if both inputs are being used
-            // eslint-disable-next-line camelcase
             const { geocoded_address, warnings } = action.payload;
+            const { formatted_address, latitude, longitude } = geocoded_address;
             const { label } = action;
             console.log(action.payload);
             return {
                 ...state,
-                [`geocoded_address_${label}`]: geocoded_address.formatted_address,
+                [`geocoded_address_${label}`]: formatted_address,
                 [`isAddressValid_${label}`]: (!Array.isArray(warnings) || !warnings.length),
-                isAddressCardButtonDisabled: false
+                isAddressCardButtonDisabled: false,
+                [`latitude_address_${label}`]: latitude,
+                [`longitude_address_${label}`]: longitude
             };
         case 'DISABLE_ADDRESS_CARD_BUTTON':
             const { value } = action;

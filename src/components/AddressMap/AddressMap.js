@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 /* global google */
 
 // @vendors
@@ -9,6 +10,7 @@ import {
     GoogleMap,
     DirectionsRenderer
 } from 'react-google-maps';
+import { connect } from 'react-redux';
 
 export const AddressMap = compose(
     withProps({
@@ -21,10 +23,16 @@ export const AddressMap = compose(
     withGoogleMap,
     lifecycle({
         componentDidMount() {
+            const {
+                latitude_address_Origin,
+                longitude_address_Origin,
+                latitude_address_Destination,
+                longitude_address_Destination
+            } = this.props;
             const directionsService = new google.maps.DirectionsService();
             directionsService.route({
-                origin: new google.maps.LatLng(30.3986877, -97.72359399999999),
-                destination: new google.maps.LatLng(30.2677416, -97.74260389999999),
+                origin: new google.maps.LatLng(latitude_address_Origin, longitude_address_Origin),
+                destination: new google.maps.LatLng(latitude_address_Destination, longitude_address_Destination),
                 travelMode: google.maps.TravelMode.DRIVING
             }, (response, status) => {
                 if (status === google.maps.DirectionsStatus.OK) {
@@ -47,4 +55,11 @@ export const AddressMap = compose(
     );
 });
 
-export default AddressMap;
+const mapStateToProps = state => ({
+    latitude_address_Origin: state.latitude_address_Origin,
+    longitude_address_Origin: state.longitude_address_Origin,
+    latitude_address_Destination: state.latitude_address_Destination,
+    longitude_address_Destination: state.longitude_address_Destination
+});
+
+export default connect(mapStateToProps, null)(AddressMap);

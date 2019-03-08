@@ -12,8 +12,8 @@ import Typography from '@material-ui/core/Typography';
 
 // @components
 import AddressCardButton from '../../containers/AddressCardButton';
-import AddressCardInputFrom from '../../containers/AddressCardInputFrom';
-import AddressCardInputTo from '../../containers/AddressCardInputTo';
+import AddressCardInputFrom from '../../containers/AddressCardInputOrigin';
+import AddressCardInputTo from '../../containers/AddressCardInputDestination';
 
 // Setting material-ui classes
 const styles = theme => ({

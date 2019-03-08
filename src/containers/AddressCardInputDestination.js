@@ -8,23 +8,23 @@ import AddressInput from '../components/AddressInput/AddressInput';
 import { validateAddress, disableAddressCardButton } from '../actions';
 
 const mapStateToProps = state => ({
-    label: 'From',
-    geocoded_address: state.geocoded_address_From,
-    isAddressValid: state.isAddressValid_From
+    label: 'To',
+    geocoded_address: state.geocoded_address_Destination,
+    isAddressValid: state.isAddressValid_Destination
 });
 
 const mapDispatchToProps = dispatch => ({
     onBlur: (formattedAddress) => {
-        dispatch(validateAddress(formattedAddress, 'From'));
+        dispatch(validateAddress(formattedAddress, 'Destination'));
     },
     onChange: (value) => {
-        dispatch(disableAddressCardButton(value, 'From'));
+        dispatch(disableAddressCardButton(value, 'Destination'));
     }
 });
 
-const AddressCardInputFrom = connect(
+const AddressCardInputTo = connect(
     mapStateToProps,
     mapDispatchToProps
 )(AddressInput);
 
-export default AddressCardInputFrom;
+export default AddressCardInputTo;
