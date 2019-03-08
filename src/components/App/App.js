@@ -1,7 +1,8 @@
 // @vendors
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Switch, Route, withRouter } from 'react-router-dom';
 
 // @material-ui
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -9,6 +10,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 // @components
 import AddressCard from '../AddressCard/AddressCard';
 import Header from '../Header/Header';
+import AddressResults from '../AddressResults/AddressResults';
 
 // @actions
 import { getUserData } from '../../actions';
@@ -35,9 +37,14 @@ class App extends Component {
         return (
             <div className="App">
                 <Header />
-                <div className="address">
-                    <AddressCard />
-                </div>
+                <Switch>
+                    <Fragment>
+                        <div className="address-info-display">
+                            <Route exact path="/" component={AddressCard} />
+                            <Route exact path="/results" component={AddressResults} />
+                        </div>
+                    </Fragment>
+                </Switch>
             </div>
         );
     }
@@ -57,4 +64,4 @@ App.propTypes = {
     userData: PropTypes.array.isRequired
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

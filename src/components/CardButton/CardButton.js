@@ -2,6 +2,7 @@
 // @vendors
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 // @material-ui
 import Button from '@material-ui/core/Button';
@@ -18,7 +19,9 @@ const CardButton = (props) => {
             size="large"
             variant="contained"
         >
-            {label}
+            <Link to="/results" className="link">
+                {label}
+            </Link>
         </Button>
     );
 };
