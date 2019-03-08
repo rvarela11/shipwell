@@ -33,6 +33,7 @@ export const reducer = (state = initialState, action) => {
                 isAddressCardButtonDisabled: false
             };
         case 'DISABLE_ADDRESS_CARD_BUTTON':
+            console.log('onFocus');
             return {
                 ...state,
                 isAddressCardButtonDisabled: true
