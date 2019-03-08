@@ -12,7 +12,7 @@ const AddressInput = (props) => {
         isAddressValid,
         label,
         onBlur,
-        onFocus
+        onChange
     } = props;
     const handleOnBlur = (value) => {
         const addressEnding = value.slice(-4);
@@ -28,7 +28,7 @@ const AddressInput = (props) => {
             label={label}
             margin="normal"
             onBlur={e => handleOnBlur(e.target.value)}
-            onFocus={() => onFocus()}
+            onChange={e => onChange(e.target.value)}
             type="search"
         />
     );
@@ -39,7 +39,7 @@ AddressInput.propTypes = {
     isAddressValid: PropTypes.bool.isRequired,
     label: PropTypes.string.isRequired,
     onBlur: PropTypes.func.isRequired,
-    onFocus: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired
 };
 
 export default AddressInput;

@@ -39,6 +39,8 @@ export const validateAddress = (address, label) => (dispatch) => {
 };
 
 export const DISABLE_ADDRESS_CARD_BUTTON = 'DISABLE_ADDRESS_CARD_BUTTON';
-export const disableAddressCardButton = () => ({
-    type: DISABLE_ADDRESS_CARD_BUTTON
+export const disableAddressCardButton = (value, label) => ({
+    type: DISABLE_ADDRESS_CARD_BUTTON,
+    value,
+    label
 });

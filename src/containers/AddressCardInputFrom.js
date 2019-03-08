@@ -17,8 +17,8 @@ const mapDispatchToProps = dispatch => ({
     onBlur: (formattedAddress) => {
         dispatch(validateAddress(formattedAddress, 'From'));
     },
-    onFocus: () => {
-        dispatch(disableAddressCardButton());
+    onChange: (value) => {
+        dispatch(disableAddressCardButton(value, 'From'));
     }
 });
 

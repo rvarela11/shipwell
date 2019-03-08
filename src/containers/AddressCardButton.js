@@ -9,7 +9,7 @@ import { isButtonDisabled } from '../utils';
 
 const mapStateToProps = state => ({
     label: 'Search',
-    isCardButtonDisabled: isButtonDisabled(state.formatted_address_From, state.formatted_address_To, state.isAddressValid_From, state.isAddressValid_To, state.isAddressCardButtonDisabled)
+    isCardButtonDisabled: isButtonDisabled(state.input_address_From, state.input_address_To, state.isAddressValid_From, state.isAddressValid_To, state.isAddressCardButtonDisabled)
 });
 
 const AddressCardButton = connect(
