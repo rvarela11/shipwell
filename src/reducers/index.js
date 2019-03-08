@@ -25,6 +25,7 @@ export const reducer = (state = initialState, action) => {
             // eslint-disable-next-line camelcase
             const { geocoded_address, warnings } = action.payload;
             const { label } = action;
+            console.log(action.payload);
             return {
                 ...state,
                 [`geocoded_address_${label}`]: geocoded_address.formatted_address,

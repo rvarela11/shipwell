@@ -1,6 +1,11 @@
 // @vendors
 import React from 'react';
 
-const AddressResults = () => <h2>Map!</h2>;
+// @components
+import AddressMap from '../AddressMap/AddressMap';
+
+const AddressResults = () => (
+    <AddressMap isMarkerShown />
+);
 
 export default AddressResults;
