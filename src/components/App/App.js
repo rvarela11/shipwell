@@ -16,7 +16,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 // @components
 import AddressCard from '../AddressCard/AddressCard';
 import Header from '../Header/Header';
-import AddressResults from '../AddressResults/AddressResults';
+import Results from '../Results/Results';
 
 // @actions
 import { getUserData } from '../../actions';
@@ -45,7 +45,7 @@ class App extends Component {
                 <Header />
                 <Switch>
                     <Fragment>
-                        <div className="address-card-display">
+                        <div className="address-display">
                             <Route exact path="/" component={AddressCard} />
                             <Route
                                 exact
@@ -54,7 +54,7 @@ class App extends Component {
                                     (latitude_address_Origin === null && latitude_address_Destination === null) ? (
                                         <Redirect to="/" />
                                     ) : (
-                                        <AddressResults />
+                                        <Results />
                                     )
                                 )}
                             />
