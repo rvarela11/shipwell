@@ -16,8 +16,8 @@ export const AddressMap = compose(
     withProps({
         googleMapURL: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCtJUNx9yMHeFXIFA2BWIX8z8t007rCpU0&v=3.exp&libraries=geometry,drawing,places',
         loadingElement: <div style={{ height: '400px' }} />,
-        containerElement: <div style={{ width: '100%' }} />,
-        mapElement: <div style={{ height: '600px', width: '600px' }} />
+        containerElement: <div style={{ width: '80%' }} />,
+        mapElement: <div style={{ height: '50vh', width: '100%' }} />
     }),
     withScriptjs,
     withGoogleMap,

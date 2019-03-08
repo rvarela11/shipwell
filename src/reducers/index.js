@@ -19,6 +19,7 @@ export const reducer = (state = initialState, action) => {
     switch (action.type) {
         case 'RES_USER_DATA':
             const { company, user } = action.payload;
+            console.log(action.payload);
             return {
                 ...state,
                 companyData: state.companyData.concat(company),
@@ -30,7 +31,6 @@ export const reducer = (state = initialState, action) => {
             const { geocoded_address, warnings } = action.payload;
             const { formatted_address, latitude, longitude } = geocoded_address;
             const { label } = action;
-            console.log(action.payload);
             return {
                 ...state,
                 [`geocoded_address_${label}`]: formatted_address,
