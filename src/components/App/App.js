@@ -45,13 +45,13 @@ class App extends Component {
                 <Switch>
                     <Fragment>
                         <div className="address-display">
-                            <Route exact path="/" component={AddressCard} />
+                            <Route exact path="/shipwell" component={AddressCard} />
                             <Route
                                 exact
-                                path="/results"
+                                path="/shipwell-results"
                                 render={() => (
                                     (latitude_address_Origin === null && latitude_address_Destination === null) ? (
-                                        <Redirect to="/" />
+                                        <Redirect to="/shipwell" />
                                     ) : (
                                         <Results />
                                     )
