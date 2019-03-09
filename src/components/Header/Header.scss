@@ -4,9 +4,7 @@
 @import '../../globals/scss/typography';
 
 .header {
-    display: flex;
     padding: $spacing-md;
-    border-bottom: 1px solid $color__mid-gray;
 }
 
 .header__logo {

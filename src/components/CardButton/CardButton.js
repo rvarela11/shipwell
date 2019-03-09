@@ -6,29 +6,36 @@ import { Link } from 'react-router-dom';
 
 // @material-ui
 import Button from '@material-ui/core/Button';
+import { withStyles } from '@material-ui/core/styles';
+
+// Setting material-ui classes
+const styles = () => ({
+    card_button: {
+        color: 'white'
+    }
+});
 
 const CardButton = (props) => {
-    const {
-        label,
-        isCardButtonDisabled
-    } = props;
+    const { classes, label, isCardButtonDisabled } = props;
     return (
-        <Button
-            color="primary"
-            disabled={isCardButtonDisabled}
-            size="large"
-            variant="contained"
-        >
-            <Link to="/results" className="link">
+        <Link to="/results" className={`link ${isCardButtonDisabled ? 'disable-link' : ''}`}>
+            <Button
+                className={classes.card_button}
+                color="primary"
+                disabled={isCardButtonDisabled}
+                size="large"
+                variant="contained"
+            >
                 {label}
-            </Link>
-        </Button>
+            </Button>
+        </Link>
     );
 };
 
 CardButton.propTypes = {
+    classes: PropTypes.object.isRequired,
     label: PropTypes.string.isRequired,
     isCardButtonDisabled: PropTypes.bool.isRequired
 };
 
-export default CardButton;
+export default withStyles(styles)(CardButton);

@@ -21,7 +21,6 @@ import Results from '../Results/Results';
 // @actions
 import { getUserData } from '../../actions';
 
-
 // @styles
 import './App.scss';
 

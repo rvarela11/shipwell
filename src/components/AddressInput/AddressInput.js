@@ -6,6 +6,9 @@ import PropTypes from 'prop-types';
 // @material-ui
 import TextField from '@material-ui/core/TextField';
 
+// @utils
+import { addUSToAddress } from '../../utils';
+
 const AddressInput = (props) => {
     const {
         geocoded_address,
@@ -14,11 +17,6 @@ const AddressInput = (props) => {
         onBlur,
         onChange
     } = props;
-    const handleOnBlur = (value) => {
-        const addressEnding = value.slice(-4);
-        const formattedAddress = (addressEnding === ', US') ? value : `${value}, US`;
-        onBlur(formattedAddress);
-    };
     return (
         <TextField
             id={`${label} Address`}
@@ -27,7 +25,7 @@ const AddressInput = (props) => {
             helperText={(!isAddressValid) ? `Did you mean: ${geocoded_address}` : ''}
             label={label}
             margin="normal"
-            onBlur={e => handleOnBlur(e.target.value)}
+            onBlur={e => onBlur(addUSToAddress(e.target.value))}
             onChange={e => onChange(e.target.value)}
             type="search"
         />

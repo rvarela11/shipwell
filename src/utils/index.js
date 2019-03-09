@@ -9,3 +9,10 @@ export const isButtonDisabled = (
     isAddressValid_Destination,
     isAddressCardButtonDisabled
 ) => ((input_address_Origin === '' || input_address_Destination === '') || (!isAddressValid_Origin || !isAddressValid_Destination) || isAddressCardButtonDisabled);
+
+
+// Add ', US' for the Shipwell API validation
+export const addUSToAddress = (value) => {
+    const addressEnding = value.slice(-4);
+    return (addressEnding === ', US') ? value : `${value}, US`;
+};

@@ -4,16 +4,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // @material-ui
-import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
 
 // @components
 import AddressCardButton from '../../containers/AddressCardButton';
-import AddressCardInputFrom from '../../containers/AddressCardInputOrigin';
-import AddressCardInputTo from '../../containers/AddressCardInputDestination';
+import AddressCardInputOrigin from '../../containers/AddressCardInputOrigin';
+import AddressCardInputDestination from '../../containers/AddressCardInputDestination';
 
 // Setting material-ui classes
 const styles = theme => ({
@@ -46,17 +46,15 @@ const styles = theme => ({
 });
 
 const AddressCard = (props) => {
-    const {
-        classes
-    } = props;
+    const { classes } = props;
     return (
         <Card className={classes.address_card}>
             <CardContent className={classes.address_card_content}>
                 <Typography className={`${classes.typography_media_query} ${classes.address_title}`} variant="h5">
                     Address
                 </Typography>
-                <AddressCardInputFrom />
-                <AddressCardInputTo />
+                <AddressCardInputOrigin />
+                <AddressCardInputDestination />
                 <CardActions>
                     <AddressCardButton />
                 </CardActions>

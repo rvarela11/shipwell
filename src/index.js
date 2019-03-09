@@ -19,7 +19,7 @@ const store = createStore(reducer, applyMiddleware(thunkMiddleware));
 const theme = createMuiTheme({
     palette: {
         primary: {
-            main: '#81d4fa'
+            main: '#72bcd4'
         }
     },
     typography: {

@@ -26,7 +26,7 @@ export const reducer = (state = initialState, action) => {
                 userData: state.userData.concat(user)
             };
         case 'RES_VALIDATE_ADDRESS':
-            // Setting 2 (Origin & Destination) geocoded_address and isAddressValid
+            // Setting Origin & Destination eocoded_address and isAddressValid
             // This will show specific error message if both inputs are being used
             const { geocoded_address, warnings } = action.payload;
             const { formatted_address, latitude, longitude } = geocoded_address;

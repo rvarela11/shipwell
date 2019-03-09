@@ -1,6 +1,7 @@
 // @styles
 @import '../../globals/scss/css--reset';
 @import '../../globals/scss/colors';
+@import '../../globals/scss/spacing';
 
 .App {
   height: 100vh;
@@ -19,16 +20,21 @@
 
 .address-display {
   height: 100vh;
-  padding: 1%;
+  padding: $spacing-md;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
-  grid-gap: 1%;
+  grid-gap: $spacing-md;
   justify-items: center;
   align-items: center;
   overflow: hidden;
+  overflow-y: scroll;
+  background-color: $color__light-blue;
 }
 
 .link {
   text-decoration: none;
-  color: $color__white;
+}
+
+.disable-link {
+  pointer-events: none;
 }
