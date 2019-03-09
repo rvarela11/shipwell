@@ -19,7 +19,6 @@ export const reducer = (state = initialState, action) => {
     switch (action.type) {
         case 'RES_USER_DATA':
             const { company, user } = action.payload;
-            console.log(action.payload);
             return {
                 ...state,
                 companyData: state.companyData.concat(company),

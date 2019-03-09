@@ -1,0 +1,12 @@
+// @styles
+@import '../../globals/scss/typography';
+
+.route-info {
+    font-weight: 400;
+    margin: 0;
+}
+
+.route-info-title {
+    font-weight: bold;
+    margin: rem(10px) 0;
+}
