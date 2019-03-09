@@ -48,7 +48,7 @@ class App extends Component {
                             <Route exact path="/shipwell" component={AddressCard} />
                             <Route
                                 exact
-                                path="/shipwell-results"
+                                path="/shipwell/results"
                                 render={() => (
                                     (latitude_address_Origin === null && latitude_address_Destination === null) ? (
                                         <Redirect to="/shipwell" />

@@ -18,7 +18,7 @@ const styles = () => ({
 const CardButton = (props) => {
     const { classes, label, isCardButtonDisabled } = props;
     return (
-        <Link to="/shipwell-results" className={`link ${isCardButtonDisabled ? 'disable-link' : ''}`}>
+        <Link to="/shipwell/results" className={`link ${isCardButtonDisabled ? 'disable-link' : ''}`}>
             <Button
                 className={classes.card_button}
                 color="primary"
