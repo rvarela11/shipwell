@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/shipwell/static/css/main.5bb9a4e1.chunk.css"
   },
   {
-    "revision": "f5e308cb63ae6e92e980aa7368126c8c",
+    "revision": "fb031ec52e420269e0bfa00516b5fe17",
     "url": "/shipwell/index.html"
   }
 ];
