@@ -40,7 +40,7 @@ const styles = theme => ({
     }
 });
 
-const UserCard = (props) => {
+export const UserCard = (props) => {
     const {
         classes,
         companyData,

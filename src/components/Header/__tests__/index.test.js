@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 // @components
 import Header from '../Header';
 
-describe('Header Container', () => {
+describe('Header', () => {
     it('renders Header without crashing', () => {
         shallow(<Header />);
     });
