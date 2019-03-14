@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/shipwell/static/js/runtime~main.637c2865.js"
   },
   {
-    "revision": "eed3a006d87865956d7d",
-    "url": "/shipwell/static/js/main.eed3a006.chunk.js"
+    "revision": "ffa50949c6a49c9fbe16",
+    "url": "/shipwell/static/js/main.ffa50949.chunk.js"
   },
   {
     "revision": "99a7af0a6ec1640920d0",
     "url": "/shipwell/static/js/2.99a7af0a.chunk.js"
   },
   {
-    "revision": "eed3a006d87865956d7d",
+    "revision": "ffa50949c6a49c9fbe16",
     "url": "/shipwell/static/css/main.5bb9a4e1.chunk.css"
   },
   {
-    "revision": "fb031ec52e420269e0bfa00516b5fe17",
+    "revision": "4b76392512d10862872f1f5385668705",
     "url": "/shipwell/index.html"
   }
 ];
