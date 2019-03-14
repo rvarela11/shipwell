@@ -12,6 +12,7 @@ describe('CardButton', () => {
                 classes={{}}
                 label=""
                 isCardButtonDisabled
+                path=""
             />
         );
     });

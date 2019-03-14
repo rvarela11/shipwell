@@ -4,7 +4,8 @@
 
 1. React
 2. Redux
-3. SCSS
+3. React Router
+4. SCSS
 
 ### Others
 

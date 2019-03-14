@@ -16,9 +16,14 @@ const styles = () => ({
 });
 
 const CardButton = (props) => {
-    const { classes, label, isCardButtonDisabled } = props;
+    const {
+        classes,
+        label,
+        isCardButtonDisabled,
+        path
+    } = props;
     return (
-        <Link to="/shipwell/results" className={`link ${isCardButtonDisabled ? 'disable-link' : ''}`}>
+        <Link to={path} className={`link ${isCardButtonDisabled ? 'disable-link' : ''}`}>
             <Button
                 className={classes.card_button}
                 color="primary"
@@ -35,7 +40,8 @@ const CardButton = (props) => {
 CardButton.propTypes = {
     classes: PropTypes.object.isRequired,
     label: PropTypes.string.isRequired,
-    isCardButtonDisabled: PropTypes.bool.isRequired
+    isCardButtonDisabled: PropTypes.bool.isRequired,
+    path: PropTypes.string.isRequired
 };
 
 export default withStyles(styles)(CardButton);
