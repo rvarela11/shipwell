@@ -70,7 +70,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => ({
-    companyData: state.companyData,
     latitude_address_Origin: state.latitude_address_Origin,
     latitude_address_Destination: state.latitude_address_Destination,
     userData: state.userData

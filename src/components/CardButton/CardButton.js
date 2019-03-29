@@ -8,10 +8,13 @@ import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 
+// @styles
+import sassColors from '../../globals/scss/_colors.scss';
+
 // Setting material-ui classes
 const styles = () => ({
     card_button: {
-        color: 'white'
+        color: sassColors.white
     }
 });
 
