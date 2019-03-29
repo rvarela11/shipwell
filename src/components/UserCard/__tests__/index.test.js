@@ -15,7 +15,7 @@ describe('UserCard', () => {
                 geocoded_address_Destination=""
                 userData={{}}
             />
-        ).dive();
+        );
         expect(wrapper).toMatchSnapshot();
     });
     it('should show initial state from mapStateToProps', () => {

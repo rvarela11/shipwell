@@ -3,54 +3,17 @@
 exports[`UserCard renders UserCard without crashing 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <WithStyles(Card)>
-    <WithStyles(CardHeader)
-      avatar={
-        <WithStyles(Avatar)
-          aria-label="Recipe"
-        >
-          N
-        </WithStyles(Avatar)>
+  Symbol(enzyme.__unrendered__): <UserCard
+    classes={Object {}}
+    companyData={
+      Object {
+        "carrier": Object {},
       }
-      subheader="undefined undefined"
-      title="undefined undefined"
-    />
-    <WithStyles(CardContent)>
-      <div
-        className="route"
-      >
-        <h4
-          className="route-info-title"
-        >
-          Route
-        </h4>
-        <h5
-          className="route-info"
-        >
-          A: 
-        </h5>
-        <h5
-          className="route-info"
-        >
-          B: 
-        </h5>
-        <h4
-          className="route-info-title"
-        >
-          Carrier
-        </h4>
-        <h5
-          className="route-info"
-        />
-        <h5
-          className="route-info"
-        />
-        <h5
-          className="route-info"
-        />
-      </div>
-    </WithStyles(CardContent)>
-  </WithStyles(Card)>,
+    }
+    geocoded_address_Destination=""
+    geocoded_address_Origin=""
+    userData={Object {}}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -62,7 +25,7 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "class",
     "props": Object {
       "children": Array [
         <WithStyles(CardHeader)
@@ -113,10 +76,6 @@ ShallowWrapper {
         </WithStyles(CardContent)>,
       ],
       "className": undefined,
-      "classes": Object {
-        "root": "MuiCard-root-1",
-      },
-      "raised": false,
     },
     "ref": null,
     "rendered": Array [
@@ -314,7 +273,7 @@ ShallowWrapper {
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "class",
       "props": Object {
         "children": Array [
           <WithStyles(CardHeader)
@@ -365,10 +324,6 @@ ShallowWrapper {
           </WithStyles(CardContent)>,
         ],
         "className": undefined,
-        "classes": Object {
-          "root": "MuiCard-root-1",
-        },
-        "raised": false,
       },
       "ref": null,
       "rendered": Array [
