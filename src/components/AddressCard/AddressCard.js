@@ -23,7 +23,7 @@ const styles = theme => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        xs: {
+        [theme.breakpoints.between('xs', 'sm')]: {
             width: '75%'
         }
     },
@@ -39,7 +39,7 @@ const styles = theme => ({
         textAlign: 'center'
     },
     typography_media_query: {
-        xs: {
+        [theme.breakpoints.between('xs', 'sm')]: {
             fontSize: '1.25rem'
         }
     }
