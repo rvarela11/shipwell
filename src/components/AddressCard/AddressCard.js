@@ -11,9 +11,9 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
 // @components
-import AddressCardButton from '../../containers/AddressCardButton';
-import AddressCardInputOrigin from '../../containers/AddressCardInputOrigin';
-import AddressCardInputDestination from '../../containers/AddressCardInputDestination';
+import AddressCardButton from '../../containers/AddressCardButton/AddressCardButton';
+import AddressCardInputOrigin from '../../containers/AddressCardInputOrigin/AddressCardInputOrigin';
+import AddressCardInputDestination from '../../containers/AddressCardInputDestination/AddressCardInputDestination';
 
 // Setting material-ui classes
 const styles = theme => ({
@@ -23,7 +23,7 @@ const styles = theme => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        [theme.breakpoints.between('xs', 'sm')]: {
+        xs: {
             width: '75%'
         }
     },
@@ -39,7 +39,7 @@ const styles = theme => ({
         textAlign: 'center'
     },
     typography_media_query: {
-        [theme.breakpoints.between('xs', 'sm')]: {
+        xs: {
             fontSize: '1.25rem'
         }
     }

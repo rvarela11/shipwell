@@ -1,0 +1,584 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserCard renders UserCard without crashing 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <WithStyles(Card)>
+    <WithStyles(CardHeader)
+      avatar={
+        <WithStyles(Avatar)
+          aria-label="Recipe"
+        >
+          N
+        </WithStyles(Avatar)>
+      }
+      subheader="undefined undefined"
+      title="undefined undefined"
+    />
+    <WithStyles(CardContent)>
+      <div
+        className="route"
+      >
+        <h4
+          className="route-info-title"
+        >
+          Route
+        </h4>
+        <h5
+          className="route-info"
+        >
+          A: 
+        </h5>
+        <h5
+          className="route-info"
+        >
+          B: 
+        </h5>
+        <h4
+          className="route-info-title"
+        >
+          Carrier
+        </h4>
+        <h5
+          className="route-info"
+        />
+        <h5
+          className="route-info"
+        />
+        <h5
+          className="route-info"
+        />
+      </div>
+    </WithStyles(CardContent)>
+  </WithStyles(Card)>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <WithStyles(CardHeader)
+          avatar={
+            <WithStyles(Avatar)
+              aria-label="Recipe"
+            >
+              N
+            </WithStyles(Avatar)>
+          }
+          subheader="undefined undefined"
+          title="undefined undefined"
+        />,
+        <WithStyles(CardContent)>
+          <div
+            className="route"
+          >
+            <h4
+              className="route-info-title"
+            >
+              Route
+            </h4>
+            <h5
+              className="route-info"
+            >
+              A: 
+            </h5>
+            <h5
+              className="route-info"
+            >
+              B: 
+            </h5>
+            <h4
+              className="route-info-title"
+            >
+              Carrier
+            </h4>
+            <h5
+              className="route-info"
+            />
+            <h5
+              className="route-info"
+            />
+            <h5
+              className="route-info"
+            />
+          </div>
+        </WithStyles(CardContent)>,
+      ],
+      "className": undefined,
+      "classes": Object {
+        "root": "MuiCard-root-1",
+      },
+      "raised": false,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "avatar": <WithStyles(Avatar)
+            aria-label="Recipe"
+          >
+            N
+          </WithStyles(Avatar)>,
+          "subheader": "undefined undefined",
+          "title": "undefined undefined",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <div
+            className="route"
+          >
+            <h4
+              className="route-info-title"
+            >
+              Route
+            </h4>
+            <h5
+              className="route-info"
+            >
+              A: 
+            </h5>
+            <h5
+              className="route-info"
+            >
+              B: 
+            </h5>
+            <h4
+              className="route-info-title"
+            >
+              Carrier
+            </h4>
+            <h5
+              className="route-info"
+            />
+            <h5
+              className="route-info"
+            />
+            <h5
+              className="route-info"
+            />
+          </div>,
+          "className": undefined,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h4
+                className="route-info-title"
+              >
+                Route
+              </h4>,
+              <h5
+                className="route-info"
+              >
+                A: 
+              </h5>,
+              <h5
+                className="route-info"
+              >
+                B: 
+              </h5>,
+              <h4
+                className="route-info-title"
+              >
+                Carrier
+              </h4>,
+              <h5
+                className="route-info"
+              />,
+              <h5
+                className="route-info"
+              />,
+              <h5
+                className="route-info"
+              />,
+            ],
+            "className": "route",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Route",
+                "className": "route-info-title",
+              },
+              "ref": null,
+              "rendered": "Route",
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "A: ",
+                "className": "route-info",
+              },
+              "ref": null,
+              "rendered": "A: ",
+              "type": "h5",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "B: ",
+                "className": "route-info",
+              },
+              "ref": null,
+              "rendered": "B: ",
+              "type": "h5",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Carrier",
+                "className": "route-info-title",
+              },
+              "ref": null,
+              "rendered": "Carrier",
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "route-info",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "h5",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "route-info",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "h5",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "route-info",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "h5",
+            },
+          ],
+          "type": "div",
+        },
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <WithStyles(CardHeader)
+            avatar={
+              <WithStyles(Avatar)
+                aria-label="Recipe"
+              >
+                N
+              </WithStyles(Avatar)>
+            }
+            subheader="undefined undefined"
+            title="undefined undefined"
+          />,
+          <WithStyles(CardContent)>
+            <div
+              className="route"
+            >
+              <h4
+                className="route-info-title"
+              >
+                Route
+              </h4>
+              <h5
+                className="route-info"
+              >
+                A: 
+              </h5>
+              <h5
+                className="route-info"
+              >
+                B: 
+              </h5>
+              <h4
+                className="route-info-title"
+              >
+                Carrier
+              </h4>
+              <h5
+                className="route-info"
+              />
+              <h5
+                className="route-info"
+              />
+              <h5
+                className="route-info"
+              />
+            </div>
+          </WithStyles(CardContent)>,
+        ],
+        "className": undefined,
+        "classes": Object {
+          "root": "MuiCard-root-1",
+        },
+        "raised": false,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "avatar": <WithStyles(Avatar)
+              aria-label="Recipe"
+            >
+              N
+            </WithStyles(Avatar)>,
+            "subheader": "undefined undefined",
+            "title": "undefined undefined",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <div
+              className="route"
+            >
+              <h4
+                className="route-info-title"
+              >
+                Route
+              </h4>
+              <h5
+                className="route-info"
+              >
+                A: 
+              </h5>
+              <h5
+                className="route-info"
+              >
+                B: 
+              </h5>
+              <h4
+                className="route-info-title"
+              >
+                Carrier
+              </h4>
+              <h5
+                className="route-info"
+              />
+              <h5
+                className="route-info"
+              />
+              <h5
+                className="route-info"
+              />
+            </div>,
+            "className": undefined,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h4
+                  className="route-info-title"
+                >
+                  Route
+                </h4>,
+                <h5
+                  className="route-info"
+                >
+                  A: 
+                </h5>,
+                <h5
+                  className="route-info"
+                >
+                  B: 
+                </h5>,
+                <h4
+                  className="route-info-title"
+                >
+                  Carrier
+                </h4>,
+                <h5
+                  className="route-info"
+                />,
+                <h5
+                  className="route-info"
+                />,
+                <h5
+                  className="route-info"
+                />,
+              ],
+              "className": "route",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Route",
+                  "className": "route-info-title",
+                },
+                "ref": null,
+                "rendered": "Route",
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "A: ",
+                  "className": "route-info",
+                },
+                "ref": null,
+                "rendered": "A: ",
+                "type": "h5",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "B: ",
+                  "className": "route-info",
+                },
+                "ref": null,
+                "rendered": "B: ",
+                "type": "h5",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Carrier",
+                  "className": "route-info-title",
+                },
+                "ref": null,
+                "rendered": "Carrier",
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "className": "route-info",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "h5",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "className": "route-info",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "h5",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "className": "route-info",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "h5",
+              },
+            ],
+            "type": "div",
+          },
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

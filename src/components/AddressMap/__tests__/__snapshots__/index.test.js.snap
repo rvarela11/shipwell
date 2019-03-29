@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddressMap renders AddressMap without crashing 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <withProps(withScriptjs(withGoogleMap(lifecycle(Component)))) />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "containerElement": <div
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      />,
+      "googleMapURL": "https://maps.googleapis.com/maps/api/js?key=AIzaSyCtJUNx9yMHeFXIFA2BWIX8z8t007rCpU0&v=3.exp&libraries=geometry,drawing,places",
+      "loadingElement": <div
+        style={
+          Object {
+            "height": "400px",
+          }
+        }
+      />,
+      "mapElement": <div
+        style={
+          Object {
+            "height": "50vh",
+            "width": "100%",
+          }
+        }
+      />,
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "containerElement": <div
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        />,
+        "googleMapURL": "https://maps.googleapis.com/maps/api/js?key=AIzaSyCtJUNx9yMHeFXIFA2BWIX8z8t007rCpU0&v=3.exp&libraries=geometry,drawing,places",
+        "loadingElement": <div
+          style={
+            Object {
+              "height": "400px",
+            }
+          }
+        />,
+        "mapElement": <div
+          style={
+            Object {
+              "height": "50vh",
+              "width": "100%",
+            }
+          }
+        />,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

@@ -7,6 +7,7 @@ import Results from '../Results';
 
 describe('Results', () => {
     it('renders Results without crashing', () => {
-        shallow(<Results />);
+        const wrapper = shallow(<Results />);
+        expect(wrapper).toMatchSnapshot();
     });
 });

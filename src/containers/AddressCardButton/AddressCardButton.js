@@ -2,12 +2,12 @@
 import { connect } from 'react-redux';
 
 // @components
-import CardButton from '../components/CardButton/CardButton';
+import CardButton from '../../components/CardButton/CardButton';
 
 // @utils
-import { isButtonDisabled } from '../utils';
+import { isButtonDisabled } from '../../utils';
 
-const mapStateToProps = (state) => {
+export const mapStateToProps = (state) => {
     const {
         input_address_Origin,
         input_address_Destination,

@@ -7,13 +7,14 @@ import CardButton from '../CardButton';
 
 describe('CardButton', () => {
     it('renders CardButton without crashing', () => {
-        shallow(
+        const wrapper = shallow(
             <CardButton
                 classes={{}}
                 label=""
                 isCardButtonDisabled
                 path=""
             />
-        );
+        ).dive();
+        expect(wrapper).toMatchSnapshot();
     });
 });

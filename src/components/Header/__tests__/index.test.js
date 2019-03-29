@@ -7,6 +7,7 @@ import Header from '../Header';
 
 describe('Header', () => {
     it('renders Header without crashing', () => {
-        shallow(<Header />);
+        const wrapper = shallow(<Header />);
+        expect(wrapper).toMatchSnapshot();
     });
 });

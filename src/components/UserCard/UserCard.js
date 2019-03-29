@@ -15,7 +15,7 @@ import CardContent from '@material-ui/core/CardContent';
 import './UserCard.scss';
 
 // Setting material-ui classes
-const styles = theme => ({
+export const styles = theme => ({
     user_card: {
         width: '100%',
         height: '50vh',
@@ -85,7 +85,7 @@ export const UserCard = (props) => {
     );
 };
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
     companyData: state.companyData[0],
     geocoded_address_Origin: state.geocoded_address_Origin,
     geocoded_address_Destination: state.geocoded_address_Destination,

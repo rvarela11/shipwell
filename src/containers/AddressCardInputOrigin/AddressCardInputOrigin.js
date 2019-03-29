@@ -2,18 +2,18 @@
 import { connect } from 'react-redux';
 
 // @components
-import AddressInput from '../components/AddressInput/AddressInput';
+import AddressInput from '../../components/AddressInput/AddressInput';
 
 // @actions
-import { validateAddress, disableAddressCardButton } from '../actions';
+import { validateAddress, disableAddressCardButton } from '../../actions';
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
     label: 'From',
     geocoded_address: state.geocoded_address_Origin,
     isAddressValid: state.isAddressValid_Origin
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
     onBlur: (formattedAddress) => {
         dispatch(validateAddress(formattedAddress, 'Origin'));
     },

@@ -7,8 +7,9 @@ import { AddressMap } from '../AddressMap';
 
 describe('AddressMap', () => {
     it('renders AddressMap without crashing', () => {
-        shallow(
+        const wrapper = shallow(
             <AddressMap />
         );
+        expect(wrapper).toMatchSnapshot();
     });
 });

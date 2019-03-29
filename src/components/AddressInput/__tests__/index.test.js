@@ -7,7 +7,7 @@ import AddressInput from '../AddressInput';
 
 describe('AddressInput', () => {
     it('renders AddressInput without crashing', () => {
-        shallow(
+        const wrapper = shallow(
             <AddressInput
                 geocoded_address=""
                 isAddressValid
@@ -16,5 +16,6 @@ describe('AddressInput', () => {
                 onChange={() => {}}
             />
         );
+        expect(wrapper).toMatchSnapshot();
     });
 });
