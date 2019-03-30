@@ -19,20 +19,20 @@ import Header from '../Header/Header';
 import Results from '../Results/Results';
 
 // @actions
-import { getUserData } from '../../actions';
+import { fetchUser } from '../../actions';
 
 // @styles
 import './App.scss';
 
 class App extends Component {
     componentDidMount() {
-        const { getUserData } = this.props;
-        getUserData();
+        const { fetchUser } = this.props;
+        fetchUser();
     }
 
     render() {
-        const { latitude_address_Origin, latitude_address_Destination, userData } = this.props;
-        if (!Array.isArray(userData) || !userData.length) {
+        const { fetchUserLoading, latitude_address_Origin, latitude_address_Destination } = this.props;
+        if (fetchUserLoading) {
             return (
                 <div className="circular-progress">
                     <CircularProgress />
@@ -66,20 +66,20 @@ class App extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-    getUserData: () => dispatch(getUserData())
+    fetchUser: () => dispatch(fetchUser())
 });
 
 const mapStateToProps = state => ({
+    fetchUserLoading: state.fetchUserLoading,
     latitude_address_Origin: state.latitude_address_Origin,
-    latitude_address_Destination: state.latitude_address_Destination,
-    userData: state.userData
+    latitude_address_Destination: state.latitude_address_Destination
 });
 
 App.propTypes = {
-    getUserData: PropTypes.func.isRequired,
+    fetchUser: PropTypes.func.isRequired,
+    fetchUserLoading: PropTypes.bool.isRequired,
     latitude_address_Origin: PropTypes.number,
     latitude_address_Destination: PropTypes.number,
-    userData: PropTypes.array.isRequired
 };
 
 App.defaultProps = {

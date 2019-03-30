@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 const initialState = {
     companyData: [],
+    fetchUserLoading: false,
     geocoded_address_Origin: '',
     geocoded_address_Destination: '',
     input_address_Origin: '',
@@ -17,15 +18,22 @@ const initialState = {
 
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'RES_USER_DATA':
+        case 'FETCH_USER_BEGIN':
+            // Setting fetchUserLoading as true so we can show a spinner
+            return {
+                ...state,
+                fetchUserLoading: true
+            };
+        case 'FETCH_USER_SUCCESS':
             const { company, user } = action.payload;
             return {
                 ...state,
                 companyData: state.companyData.concat(company),
+                fetchUserLoading: false,
                 userData: state.userData.concat(user)
             };
-        case 'RES_VALIDATE_ADDRESS':
-            // Setting Origin & Destination eocoded_address and isAddressValid
+        case 'FETCH_VALIDATE_ADDRESS_SUCCESS':
+            // Setting Origin & Destination geocoded_address and isAddressValid
             // This will show specific error message if both inputs are being used
             const { geocoded_address, warnings } = action.payload;
             const { formatted_address, latitude, longitude } = geocoded_address;

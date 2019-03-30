@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import AddressInput from '../../components/AddressInput/AddressInput';
 
 // @actions
-import { validateAddress, disableAddressCardButton } from '../../actions';
+import { fetchValidateAddress, disableAddressCardButton } from '../../actions';
 
 export const mapStateToProps = state => ({
     label: 'To',
@@ -15,7 +15,7 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => ({
     onBlur: (formattedAddress) => {
-        dispatch(validateAddress(formattedAddress, 'Destination'));
+        dispatch(fetchValidateAddress(formattedAddress, 'Destination'));
     },
     onChange: (value) => {
         dispatch(disableAddressCardButton(value, 'Destination'));

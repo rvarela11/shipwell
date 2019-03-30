@@ -1,14 +1,20 @@
 const axios = require('axios');
 
-// Initial GET request to get the user data
+// GET request for user data
 
-export const RES_USER_DATA = 'RES_USER_DATA';
-export const resUserData = data => ({
-    type: RES_USER_DATA,
+export const FETCH_USER_BEGIN = 'FETCH_USER_BEGIN';
+export const fetchUserBegin = () => ({
+    type: FETCH_USER_BEGIN
+});
+
+export const FETCH_USER_SUCCESS = 'FETCH_USER_SUCCESS';
+export const fetchUserSuccess = data => ({
+    type: FETCH_USER_SUCCESS,
     payload: data
 });
 
-export const getUserData = () => (dispatch) => {
+export const fetchUser = () => (dispatch) => {
+    dispatch(fetchUserBegin());
     const URL = 'https://dev-api.shipwell.com/v2/auth/me/ ';
     const token = '4c4547fe6ad68c57cbac0a8cfbfec35b';
     axios.get(URL, {
@@ -16,20 +22,20 @@ export const getUserData = () => (dispatch) => {
             Authorization: `Token ${token}`
         }
     })
-        .then(response => dispatch(resUserData(response.data)))
+        .then(response => dispatch(fetchUserSuccess(response.data)))
         .catch(error => console.log('Error', error));
 };
 
 // GET request to validate address
 
-export const RES_VALIDATE_ADDRESS = 'RES_VALIDATE_ADDRESS';
-export const resValidateAddress = (data, label) => ({
-    type: RES_VALIDATE_ADDRESS,
+export const FETCH_VALIDATE_ADDRESS_SUCCESS = 'FETCH_VALIDATE_ADDRESS_SUCCESS';
+export const fetchValidateAddressSuccess = (data, label) => ({
+    type: FETCH_VALIDATE_ADDRESS_SUCCESS,
     payload: data,
     label
 });
 
-export const validateAddress = (address, label) => (dispatch) => {
+export const fetchValidateAddress = (address, label) => (dispatch) => {
     const URL = 'https://dev-api.shipwell.com/v2/locations/addresses/validate/ ';
     axios({
         method: 'post',
@@ -38,7 +44,7 @@ export const validateAddress = (address, label) => (dispatch) => {
             formatted_address: address
         }
     })
-        .then(response => dispatch(resValidateAddress(response.data, label)))
+        .then(response => dispatch(fetchValidateAddressSuccess(response.data, label)))
         .catch(error => console.log('Error', error));
 };
 
