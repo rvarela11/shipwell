@@ -1,14 +1,14 @@
 {
-  "main.css": "/shipwell/static/css/main.5bb9a4e1.chunk.css",
-  "main.js": "/shipwell/static/js/main.ffa50949.chunk.js",
-  "main.js.map": "/shipwell/static/js/main.ffa50949.chunk.js.map",
+  "main.css": "/shipwell/static/css/main.e66d1077.chunk.css",
+  "main.js": "/shipwell/static/js/main.1d35daac.chunk.js",
+  "main.js.map": "/shipwell/static/js/main.1d35daac.chunk.js.map",
   "runtime~main.js": "/shipwell/static/js/runtime~main.637c2865.js",
   "runtime~main.js.map": "/shipwell/static/js/runtime~main.637c2865.js.map",
-  "static/js/2.99a7af0a.chunk.js": "/shipwell/static/js/2.99a7af0a.chunk.js",
-  "static/js/2.99a7af0a.chunk.js.map": "/shipwell/static/js/2.99a7af0a.chunk.js.map",
+  "static/js/2.6123c46c.chunk.js": "/shipwell/static/js/2.6123c46c.chunk.js",
+  "static/js/2.6123c46c.chunk.js.map": "/shipwell/static/js/2.6123c46c.chunk.js.map",
   "index.html": "/shipwell/index.html",
-  "precache-manifest.9d7ae2633ac188064698fbcbadb2b710.js": "/shipwell/precache-manifest.9d7ae2633ac188064698fbcbadb2b710.js",
+  "precache-manifest.a6b9ea7521c0f86db446c7f4caf7bc69.js": "/shipwell/precache-manifest.a6b9ea7521c0f86db446c7f4caf7bc69.js",
   "service-worker.js": "/shipwell/service-worker.js",
-  "static/css/main.5bb9a4e1.chunk.css.map": "/shipwell/static/css/main.5bb9a4e1.chunk.css.map",
+  "static/css/main.e66d1077.chunk.css.map": "/shipwell/static/css/main.e66d1077.chunk.css.map",
   "static/media/Header.scss": "/shipwell/static/media/shipwell-logo.86d57f32.png"
 }
