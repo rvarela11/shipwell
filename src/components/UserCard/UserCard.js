@@ -15,7 +15,7 @@ import CardContent from '@material-ui/core/CardContent';
 import './UserCard.scss';
 
 // Setting material-ui classes
-export const styles = theme => ({
+const styles = theme => ({
     user_card: {
         width: '100%',
         height: '50vh',

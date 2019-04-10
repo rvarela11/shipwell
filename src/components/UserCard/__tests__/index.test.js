@@ -3,19 +3,19 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // @components
-import { UserCard, mapStateToProps, styles} from '../UserCard';
+import { UserCard, mapStateToProps } from '../UserCard';
 
 describe('UserCard', () => {
+    const wrapper = shallow(
+        <UserCard
+            classes={{}}
+            companyData={{ carrier: {} }}
+            geocoded_address_Origin=""
+            geocoded_address_Destination=""
+            userData={{}}
+        />
+    );
     it('renders UserCard without crashing', () => {
-        const wrapper = shallow(
-            <UserCard
-                classes={{}}
-                companyData={{ carrier: {} }}
-                geocoded_address_Origin=""
-                geocoded_address_Destination=""
-                userData={{}}
-            />
-        );
         expect(wrapper).toMatchSnapshot();
     });
     it('should show initial state from mapStateToProps', () => {
