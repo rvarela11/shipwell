@@ -79,7 +79,7 @@ App.propTypes = {
     fetchUser: PropTypes.func.isRequired,
     fetchUserLoading: PropTypes.bool.isRequired,
     latitude_address_Origin: PropTypes.number,
-    latitude_address_Destination: PropTypes.number,
+    latitude_address_Destination: PropTypes.number
 };
 
 App.defaultProps = {

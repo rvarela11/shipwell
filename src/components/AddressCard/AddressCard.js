@@ -45,7 +45,7 @@ const styles = theme => ({
     }
 });
 
-const AddressCard = (props) => {
+export const AddressCard = (props) => {
     const { classes } = props;
     return (
         <Card className={classes.address_card}>

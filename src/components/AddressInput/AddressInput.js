@@ -20,7 +20,7 @@ const AddressInput = (props) => {
     return (
         <TextField
             id={`${label} Address`}
-            className='address-input'
+            className="address-input"
             fullWidth
             error={!isAddressValid}
             helperText={(!isAddressValid) ? `Did you mean: ${geocoded_address}` : ''}

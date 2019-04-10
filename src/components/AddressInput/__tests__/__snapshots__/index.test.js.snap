@@ -5,6 +5,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AddressInput
     geocoded_address=""
+    helperText=""
     isAddressValid={true}
     label=""
     onBlur={[Function]}
