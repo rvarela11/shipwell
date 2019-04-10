@@ -23,6 +23,7 @@ const styles = theme => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        justifyContent: 'center',
         [theme.breakpoints.between('xs', 'sm')]: {
             width: '75%'
         }
@@ -45,7 +46,7 @@ const styles = theme => ({
     }
 });
 
-export const AddressCard = (props) => {
+const AddressCard = (props) => {
     const { classes } = props;
     return (
         <Card className={classes.address_card}>
