@@ -6,15 +6,19 @@ import { shallow } from 'enzyme';
 import CardButton from '../CardButton';
 
 describe('CardButton', () => {
+    const wrapper = shallow(
+        <CardButton
+            classes={{}}
+            label=""
+            isCardButtonDisabled
+            path=""
+        />
+    ).dive();
     it('renders CardButton without crashing', () => {
-        const wrapper = shallow(
-            <CardButton
-                classes={{}}
-                label=""
-                isCardButtonDisabled
-                path=""
-            />
-        ).dive();
         expect(wrapper).toMatchSnapshot();
+    });
+    it('isCardButtonDisabled =  false', () => {
+        wrapper.setProps({ isCardButtonDisabled: false });
+        expect(wrapper.find('.disable-link').length).toBe(0);
     });
 });
